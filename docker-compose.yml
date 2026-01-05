@@ -12,6 +12,7 @@ services:
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
       - ./certbot/www:/var/www/certbot:ro
       - ./certbot/conf:/etc/letsencrypt:ro
+      - /opt/app/LANDPAGE:/var/www/landpage:ro
     networks:
       - zbx_net_frontend
       - zbx_net_backend
